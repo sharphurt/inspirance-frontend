@@ -1,0 +1,54 @@
+.panel {
+    overflow: hidden;
+    position: fixed;
+    background-color: #b7e1ff;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 600px;
+}
+
+.centered {
+    position: absolute;
+    left: 2%;
+    top: 20%;
+}
+
+.character-img {
+    background-color: transparent;
+    width: 518px;
+    height: 528px;
+}
+
+.logo-container {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+    left: 60px;
+    position: absolute;
+    top: 51px;
+}
+
+.logo {
+    background-color: transparent;
+    height: 30px;
+    margin-top: -2px;
+    mix-blend-mode: normal;
+    position: relative;
+    width: 139px;
+}
+
+.tagline {
+    background-color: transparent;
+    color: #2c81beb2;
+    font-family: var(--font-family-mont-bold);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    text-align: left;
+}
