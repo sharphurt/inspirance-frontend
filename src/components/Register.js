@@ -1,87 +1,16 @@
-import React, {useState, useRef} from "react";
-import {useDispatch, useSelector} from "react-redux";
+import React from "react";
 import './Register.css';
 import RegisterLogoPanel from "./RegisterLogoPanel";
-
-import Form from "react-validation/build/form";
-import CheckButton from "react-validation/build/button";
-import {isEmail} from "validator";
-
-import {register} from "../actions/auth";
-import {NavLink, Redirect, useHistory} from "react-router-dom";
-
-const required = (value) => {
-	if (!value) {
-		return (
-			<div className="alert alert-danger" role="alert">
-				This field is required!
-			</div>
-		);
-	}
-};
-
-const vEmail = (value) => {
-	if (!isEmail(value)) {
-		console.log("email validate")
-		return (
-			<div className="alert alert-danger" role="alert">
-				This is not a valid email.
-			</div>
-		);
-	}
-};
-
-const vPassword = (value) => {
-	if (value.length < 6 || value.length > 40) {
-		console.log("password validate")
-		return (
-			<div className="alert alert-danger" role="alert">
-				The password must be between 6 and 40 characters.
-			</div>
-		);
-	}
-};
-
+import RegisterForm from "./RegisterForm";
+import {NavLink, Redirect} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 const Register = () => {
-	const form = useRef();
-	const checkBtn = useRef();
+	const {isLoggedIn} = useSelector(state => state.auth);
 
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [successful, setSuccessful] = useState(false);
-
-	const {message} = useSelector(state => state.message);
-	const dispatch = useDispatch();
-
-	const onChangeEmail = (e) => {
-		const email = e.target.value;
-		setEmail(email);
-	};
-
-	const onChangePassword = (e) => {
-		const password = e.target.value;
-		setPassword(password);
-	};
-
-	const handleRegister = (e) => {
-		console.log("register")
-		e.preventDefault();
-
-		setSuccessful(false);
-
-		form.current.validateAll();
-
-		if (checkBtn.current.context._errors.length === 0) {
-			dispatch(register(email, password))
-				.then(() => {
-					setSuccessful(true);
-				})
-				.catch(() => {
-					setSuccessful(false);
-				});
-		}
-	};
+	if (isLoggedIn) {
+		return <Redirect to="/profile"/>;
+	}
 
 	return (
 		<div>
@@ -105,45 +34,9 @@ const Register = () => {
 					</button>
 				</div>
 
-				<Form className="registration-form" ref={form} onSubmit={handleRegister}>
-					<div className="mont-regular-normal-black-16px">или</div>
-					<div className="input-container">
-						<div className="input-hint">Электронная почта</div>
-						<div className="textbox-container">
-							<input className="input-shape input-text"
-								   type="email"
-								   placeholder="example@gmail.com"
-								   value={email}
-								   onChange={onChangeEmail}
-								   validations={[required, vEmail]}/>
-						</div>
-					</div>
+				<div className="mont-regular-normal-black-16px">или</div>
 
-					<div className="input-container">
-						<div className="input-hint">Пароль</div>
-						<div className="textbox-container">
-							<input className="input-shape input-text"
-								   type="password"
-								   value={password}
-								   onChange={onChangePassword}
-								   validations={[required, vPassword]}/>
-						</div>
-					</div>
-
-					<a className="link valign-text-middle" href="">Забыли пароль?</a>
-					<button className="button primary-button">
-						<div>Зарегистрироваться</div>
-					</button>
-
-					{message && (
-						<div className="form-group">
-							<div className={successful ? "alert alert-success" : "alert alert-danger"} role="alert">
-								{message}
-							</div>
-						</div>
-					)}
-					<CheckButton style={{display: "none"}} ref={checkBtn}/>
-				</Form>
+				<RegisterForm />
 			</div>
 		</div>
 	);

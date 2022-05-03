@@ -1,28 +1,29 @@
 import axios from "axios";
+import {Redirect} from "react-router-dom";
+import React from "react";
 
-const API_URL = "http://localhost:8080/api/auth/";
+const API_URL = "http://catstack.net:8102/api/v1/auth/";
 
-const register = (username, email, password) => {
-	return axios.post(API_URL + "signup", {
-		username,
-		email,
-		password,
+const register = (username, firstName, email, password) => {
+	return axios({
+		method: 'post',
+		headers: {'Content-Type': 'application/json'},
+		url: API_URL + 'register',
+		withCredentials: false,
+		data: {
+			username,
+			password,
+			email,
+			firstName
+		}
 	});
 };
 
 const login = (username, password) => {
-	return axios
-		.post(API_URL + "signin", {
-			username,
-			password,
-		})
-		.then((response) => {
-			if (response.data.accessToken) {
-				localStorage.setItem("user", JSON.stringify(response.data));
-			}
-
-			return response.data;
-		});
+	return axios.post(API_URL + "login", {
+		username,
+		password,
+	});
 };
 
 const logout = () => {

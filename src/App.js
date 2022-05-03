@@ -9,18 +9,11 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
-
-import {logout} from "./actions/auth";
 import {clearMessage} from "./actions/message";
-
 import {history} from "./helpers/history";
-
-import EventBus from "./common/EventBus";
+import Logout from "./components/Logout";
 
 const App = () => {
-	const [showModeratorBoard, setShowModeratorBoard] = useState(false);
-	const [showAdminBoard, setShowAdminBoard] = useState(false);
-
 	const {user: currentUser} = useSelector((state) => state.auth);
 	const dispatch = useDispatch();
 
@@ -30,28 +23,6 @@ const App = () => {
 		});
 	}, [dispatch]);
 
-	const logOut = useCallback(() => {
-		dispatch(logout());
-	}, [dispatch]);
-
-	useEffect(() => {
-		if (currentUser) {
-			setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
-			setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
-		} else {
-			setShowModeratorBoard(false);
-			setShowAdminBoard(false);
-		}
-
-		EventBus.on("logout", () => {
-			logOut();
-		});
-
-		return () => {
-			EventBus.remove("logout");
-		};
-	}, [currentUser, logOut]);
-
 	return (
 		<Router history={history}>
 			<div>
@@ -60,11 +31,10 @@ const App = () => {
 						<Route exact path={["/", "/home"]} component={Home}/>
 						<Route exact path="/login" component={Login}/>
 						<Route exact path="/register" component={Register}/>
+						<Route exact path="/logout" component={Logout} />
 						<Route exact path="/profile" component={Profile}/>
 					</Switch>
 				</div>
-
-				{/* <AuthVerify logOut={logOut}/> */}
 			</div>
 		</Router>
 	);
