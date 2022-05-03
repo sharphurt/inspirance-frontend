@@ -84,10 +84,9 @@
 
 .google-button {
     height: 56px;
-    position: relative;
     width: 56px;
     background-color: var(--white);
-    border: 2px solid #e1e1e1;
+    border: 2px solid #e1e1e1 !important;
     border-radius: 100px;
 }
 
@@ -105,11 +104,9 @@
 
 .vk-button {
     height: 56px;
-    mix-blend-mode: normal;
-    position: relative;
     width: 56px;
     background-color: #0077ff;
-    border: 2px solid #e1e1e1;
+    border: 0px solid #ffffff !important;
     border-radius: 100px;
 }
 
@@ -232,18 +229,26 @@
     text-decoration: none;
 }
 
-.primary-button {
+.button {
     align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.primary-button {
+    border-width: 0;
+    padding: 16px 32px;
     background-color: var(--blue);
     border-radius: 30px;
-    border-width: 0;
     display: flex;
     gap: 10px;
-    justify-content: center;
     min-height: 48px;
     min-width: 240px;
-    padding: 16px 32px;
-    position: relative;
+}
+
+.button:focus {
+    outline: none !important;
+    border-color: #ffffff;
 }
 
 .primary-button:hover {
@@ -256,13 +261,11 @@
 }
 
 .primary-button>div {
-    background-color: transparent;
     color: var(--white);
     font-family: var(--font-family-mont-semibold);
     font-size: var(--font-size-m);
     font-style: normal;
     font-weight: 600;
-    letter-spacing: 0.00px;
     line-height: normal;
     mix-blend-mode: normal;
     position: relative;

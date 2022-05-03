@@ -95,10 +95,10 @@ const Register = () => {
 					</div>
 				</div>
 				<div className="social-buttons-container">
-					<button className="google-button">
+					<button className="button google-button">
 						<img className="google-icon" src={require('../img/google-logo.svg')}/>
 					</button>
-					<button className="vk-button">
+					<button className="button vk-button">
 						<img className="vk-icon" src={require('../img/vk-logo.svg')}/>
 					</button>
 				</div>
@@ -129,7 +129,7 @@ const Register = () => {
 					</div>
 
 					<a className="link valign-text-middle" href="">Забыли пароль?</a>
-					<button className="primary-button">
+					<button className="button primary-button">
 						<div>Зарегистрироваться</div>
 					</button>
 
