@@ -2,7 +2,7 @@ import axios from "axios";
 import {Redirect} from "react-router-dom";
 import React from "react";
 
-const API_URL = "http://catstack.net:8102/api/v1/auth/";
+const API_URL = "https://catstack.net:8102/api/v1/auth/";
 
 const register = (username, firstName, email, password) => {
 	return axios({
