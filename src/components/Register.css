@@ -243,7 +243,6 @@
     display: flex;
     gap: 10px;
     min-height: 48px;
-    min-width: 240px;
 }
 
 .button:focus {

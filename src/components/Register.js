@@ -1,13 +1,14 @@
 import React, {useState, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import './Register.css';
-import LogoPanel from "./LogoPanel";
+import RegisterLogoPanel from "./RegisterLogoPanel";
 
 import Form from "react-validation/build/form";
 import CheckButton from "react-validation/build/button";
 import {isEmail} from "validator";
 
 import {register} from "../actions/auth";
+import {NavLink, Redirect, useHistory} from "react-router-dom";
 
 const required = (value) => {
 	if (!value) {
@@ -40,6 +41,7 @@ const vPassword = (value) => {
 		);
 	}
 };
+
 
 const Register = () => {
 	const form = useRef();
@@ -83,7 +85,7 @@ const Register = () => {
 
 	return (
 		<div>
-			<LogoPanel/>
+			<RegisterLogoPanel/>
 			<div className="form-container">
 				<h1 className="create-profile-header">Создать профиль</h1>
 				<div className="already-registered-question">
@@ -91,7 +93,7 @@ const Register = () => {
 						Уже есть аккаунт?
 					</div>
 					<div className="login-link-container">
-						<a className="link valign-text-middle" href="">Войти</a>
+						<NavLink className="link valign-text-middle" to='/login'>Войти</NavLink>
 					</div>
 				</div>
 				<div className="social-buttons-container">

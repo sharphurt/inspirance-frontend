@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import './LogoPanel.css'
 
-export default class LogoPanel extends Component {
+export default class LoginLogoPanel extends Component {
 	render() {
 		return (
 			<div className="panel">
 				<div className="centered">
-					<img className="character-img" src={require('../img/character-register.png')}/>
+					<img className="character-img" src={require('../img/character-login.png')}/>
 				</div>
 				<div className="logo-container">
 					<img className="logo" src={require('../img/logo.svg')}/>
