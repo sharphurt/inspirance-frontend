@@ -32,7 +32,7 @@ class Header extends Component {
 						<a href="\">
 							<img className="logo" src={require('../img/logo.svg')}/>
 						</a>
-						<a className="header-ref tasks" href="">Задания</a>
+						<a className="header-ref" href="/tasks">Задания</a>
 
 						{/*<a className="header-ref challenges" href="">Дизайн-вызов</a>*/}
 

@@ -10,6 +10,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "cors": "^2.8.5",
+    "multi-range-slider-react": "^1.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^7.30.0",

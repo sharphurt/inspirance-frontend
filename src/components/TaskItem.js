@@ -19,7 +19,7 @@ export default function TaskItem({data}) {
 						{data.worksCount}
 					</div>
 					<div className="deadline">
-						{data.deadline}
+						{data.deadlineText}
 					</div>
 				</div>
 

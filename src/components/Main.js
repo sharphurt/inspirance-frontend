@@ -5,9 +5,15 @@ import "./Main.css"
 import TaskContainer from "./TaskContainer";
 import PopularWorks from "./PopularWorks";
 import Footer from "./Footer";
+import {lastTasks} from "../data/Tasks/LastTasks";
 
 
 export default function Main({data}) {
+
+	var tasks = lastTasks;
+	tasks.showMoreButton = true;
+	tasks.header = "Новые задания"
+
 	return (
 		<div>
 			<Header/>
@@ -25,7 +31,7 @@ export default function Main({data}) {
 						</div>
 						<img className="banner-img" src={require("../img/banner-img.png")}/>
 					</div>
-					<TaskContainer/>
+					<TaskContainer data={tasks}/>
 					<PopularWorks/>
 				</div>
 			</div>

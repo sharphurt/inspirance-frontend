@@ -1,0 +1,292 @@
+.multi-range-slider {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    height: 2px !important;
+    border: solid 0 transparent !important;
+    box-shadow: 0 0 0 transparent !important;
+    background-color: #898989 !important;
+
+}
+
+.bar-left {
+    background-color: #898989 !important;
+    height: 2px !important;
+    padding: 0 !important;
+}
+
+.bar {
+    background-color: #898989 !important;
+    height: 2px !important;
+}
+
+.multi-range-slider .bar-right {
+    background-color: #898989 !important;
+    box-shadow: 0 0 0 transparent !important;
+    border-radius: 0 !important;
+    border-width: 1px !important;
+}
+
+.multi-range-slider .bar-left {
+    box-shadow: 0 0 0 transparent !important;
+    border-radius: 0 !important;
+    background-color: #898989 !important;
+}
+
+.bar-inner {
+    background-color: black !important;
+    height: 2px !important;
+}
+
+.multi-range-slider .thumb::before {
+    background: black !important;
+    position: absolute;
+    width: 22px !important;
+    height: 22px !important;
+    border: solid 1px black !important;
+    box-shadow: inset 0 0 0 7px white !important;
+    border-radius: 50%;
+    z-index: 1;
+    margin: -8px;
+    cursor: pointer;
+}
+
+.multi-range-slider .thumb * {
+    background-color: transparent !important;
+    box-shadow: 0 0 0 transparent !important;
+}
+
+.menu-container {
+    position: absolute;
+    width: 352px;
+    height: 1075px;
+    left: 60px;
+    top: 100px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 64px;
+
+    position: absolute;
+    width: 299px;
+    height: 506px;
+    left: 0px;
+    top: 68px;
+}
+
+.menu-header {
+    width: 80px;
+    height: 20px;
+
+    /* headers/h3 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.rb-group {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    width: 61px;
+    height: 24px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.rb-label {
+    width: 31px;
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    display: flex;
+    align-items: center;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.rb-container {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    order: 0;
+    flex-grow: 0;
+}
+
+.rb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: solid 1px black;
+}
+
+.rb-container:hover input ~ .checkmark {
+    background-color: #ffffff;
+}
+
+
+.rb-container input:checked ~ .checkmark {
+    border: solid 1px #504EFF;
+    background: #504EFF;
+    box-shadow: inset 0 0 0 5px white;
+
+}
+
+.rb-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.rb-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.rb-container .checkmark:after {
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #504EFF;
+}
+
+.date-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    width: 299px;
+    height: 126px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.date-picker-value {
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    display: flex;
+    align-items: center;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.multi-range-slider {
+    width: 299px;
+    height: 18px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.tasks {
+    position: absolute;
+    left: 460px;
+    right: 197px;
+    top: 170px;
+}
+
+.footer-container-1 {
+    top: 1600px !important;
+}
