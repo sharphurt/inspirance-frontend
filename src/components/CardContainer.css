@@ -1,0 +1,63 @@
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    position: absolute;
+    height: 624px;
+    left: 460px;
+    right: 64px;
+    top: 173px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+    flex-wrap: wrap;
+}
+
+.cards:after {
+    content: '';
+    display:block;
+    height:0px;
+    width:100%;
+}
+
+.cards-container-name {
+
+    width: 1076px;
+    height: 51px;
+
+    /* headers/h1 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 51px;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}

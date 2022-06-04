@@ -1,0 +1,163 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 352.5px;
+    height: 312px;
+
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.preview {
+    width: 352.5px;
+    height: 260px;
+
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 8px;
+
+    width: 352.5px;
+    height: 36px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 244px;
+    height: 36px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+
+    border-radius: 100px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.author {
+    height: 31px;
+
+    /* headers/h3 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.likes-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 42px;
+    height: 36px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.like-icon {
+    width: 15px;
+    height: 11px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.likes-count {
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    display: flex;
+    align-items: center;
+
+    /* field/field default */
+
+    color: #686868;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}

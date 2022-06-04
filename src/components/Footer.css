@@ -1,0 +1,88 @@
+.footer {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 57px;
+    gap: 1204px;
+
+    position: relative;
+    width: 100%;
+    height: 104px;
+    order: 10000;
+
+    margin-top: 160px;
+
+    border: 1px solid #E6E1DB;
+}
+
+.footer-email {
+    /* txt */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    display: flex;
+    align-items: center;
+
+    /* field/field default */
+
+    color: #686868;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.social-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+
+    width: 111px;
+    height: 48px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.social-button {
+    width: 48px;
+    height: 48px;
+
+    /* interface/card grey */
+
+    background: #E6E1DB;
+    border-radius: 489px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.social-icon {
+    position: relative;
+    left: 14px;
+    right: 14px;
+    top:10px;
+    bottom: 14px;
+}

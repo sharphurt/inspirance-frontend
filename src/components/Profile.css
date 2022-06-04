@@ -1,0 +1,373 @@
+.profile-user-card {
+    /* Frame 139 */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+
+    position: absolute;
+    width: 352px;
+    height: 744px;
+    left: 60px;
+    top: 173px;
+
+    /* field/disabled */
+
+    background: #EFEFEF;
+    border-radius: 16px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+
+    width: 288px;
+    height: 680px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.avatar-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    width: 288px;
+    height: 251px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.user-card-avatar {
+    width: 132px;
+    height: 132px;
+
+    border-radius: 100px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.name {
+    /* Константин Иванов */
+
+
+    width: 304px;
+    height: 31px;
+
+    /* headers/h2 */
+
+    font-family: 'Mont', serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 31px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.about {
+
+    width: 301px;
+    height: 48px;
+
+    /* txt */
+
+    font-family: 'Mont', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.button {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 28px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.primary-button {
+    width: 288px;
+    height: 51px;
+
+    padding: 16px 18px;
+    gap: 10px;
+
+    background: #504EFF;
+}
+
+.stat-table {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 288px;
+    height: 104px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.stat-table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 48px;
+
+    width: 288px;
+    height: 24px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.row-1 {
+    order: 1;
+}
+
+.row-2 {
+    order: 2;
+}
+
+.row-3 {
+    order: 3;
+}
+
+.stat-table-text-right {
+    width: 24px;
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    text-align: right;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.stat-table-text-left {
+    width: 62px;
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 288px;
+    height: 130px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.awards-header {
+
+    width: 304px;
+    height: 20px;
+
+    /* headers/h3 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.award-item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 18px;
+
+    width: 124px;
+    height: 86px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.award-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    width: 53px;
+    height: 86px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.award-icon {
+    width: 53px;
+    height: 54px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.award-text {
+    width: 6px;
+    height: 24px;
+
+    /* txt */
+
+    font-family: 'Mont', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.footer-container {
+    position: relative;
+    top: 1500px;
+}

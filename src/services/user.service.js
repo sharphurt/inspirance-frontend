@@ -1,10 +1,16 @@
 import axios from "axios";
 import authHeader from "./auth-header";
+import {useSelector} from "react-redux";
 
-const API_URL = "http://localhost:8080/api/test/";
+const API_URL = "http://catstack.net:8102/api/v1/user/";
 
 const getPublicContent = () => {
-  return axios.get(API_URL + "all");
+  return axios({
+    method: 'get',
+    headers: {'Content-Type': 'application/json'} + authHeader(),
+    url: API_URL + 'getMyProfile',
+    withCredentials: false,
+  });
 };
 
 const getUserBoard = () => {

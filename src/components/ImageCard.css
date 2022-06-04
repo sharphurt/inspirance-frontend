@@ -1,0 +1,11 @@
+.card {
+    width: 344px;
+    height: 258px;
+    border-radius: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

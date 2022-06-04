@@ -12,6 +12,8 @@ import Profile from "./components/Profile";
 import {clearMessage} from "./actions/message";
 import {history} from "./helpers/history";
 import Logout from "./components/Logout";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 const App = () => {
 	const {user: currentUser} = useSelector((state) => state.auth);
@@ -26,15 +28,16 @@ const App = () => {
 	return (
 		<Router history={history}>
 			<div>
-				<div className="container mt-3">
+				<div>
 					<Switch>
-						<Route exact path={["/", "/home"]} component={Home}/>
+						<Route exact path={["/", "/home"]} component={Main}/>
 						<Route exact path="/login" component={Login}/>
 						<Route exact path="/register" component={Register}/>
-						<Route exact path="/logout" component={Logout} />
+						<Route exact path="/logout" component={Logout}/>
 						<Route exact path="/profile" component={Profile}/>
 					</Switch>
 				</div>
+
 			</div>
 		</Router>
 	);
