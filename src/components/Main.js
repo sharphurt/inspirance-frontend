@@ -15,7 +15,8 @@ export default function Main({data}) {
 				<div className="page-flow">
 					<div className="banner">
 						<div className="banner-data">
-							<div className="banner-header">Вдохновитесь
+							<div className="banner-header">
+								Вдохновитесь <br/>
 								на креатив
 							</div>
 							<div className="banner-text">Выполняйте задания, прокачивайте навыки, становитесь лучше!

@@ -3,47 +3,16 @@ import TaskItem from "./TaskItem";
 import "./TaskContainer.css"
 import "./PopularWorks.css"
 import PopularWorkItem from "./PopularWorkItem";
+import {bestWorks} from "../data/BestWorks";
 
 export default function PopularWorks({data}) {
-
-	const defaultTasks = [
-		{
-			name: "Любовь Самойлова",
-			likes: 141,
-			avatarUrl: require("../img/avatars/avatar-1.png"),
-			preview: require("../img/popular-works/1.png"),
-			themeName: "Сайты"
-		},
-		{
-			name: "Егор Ракитов",
-			likes: 127,
-			avatarUrl: require("../img/avatars/avatar-2.png"),
-			preview: require("../img/popular-works/2.png"),
-			themeName: "Иллюстрации"
-		},
-		{
-			name: "Евгений Печкин",
-			likes: 86,
-			avatarUrl: require("../img/avatars/avatar-3.png"),
-			preview: require("../img/popular-works/3.png"),
-			themeName: "Логотипы"
-		},
-		{
-			name: "Дарья Любимова",
-			likes: 78,
-			avatarUrl: require("../img/avatars/avatar-4.png"),
-			preview: require("../img/popular-works/4.png"),
-			themeName: "Иллюстрации"
-		},
-
-	]
 
 	const [worksList, setWorksList] = useState([]);
 
 	const [selectedCategory, setSelectedCategory] = useState();
 
 	useEffect(() => {
-		setWorksList(defaultTasks);
+		setWorksList(bestWorks);
 	}, []);
 
 	function getFilteredList() {
@@ -77,7 +46,7 @@ export default function PopularWorks({data}) {
 			</div>
 			<div className="task-filter">
 				<div className="filter-buttons-container">
-					<button className="select-button" value="" onClick={handleFilter}>Все</button>
+					<button className="select-button" id="selected" value="" onClick={handleFilter}>Все</button>
 					<button className="select-button" value="Иллюстрации" onClick={handleFilter}>Иллюстрации</button>
 					<button className="select-button" value="Логотипы" onClick={handleFilter}>Логотипы</button>
 					<button className="select-button" value="Сайты" onClick={handleFilter}>Сайты</button>
