@@ -135,23 +135,22 @@
 }
 
 .nothing-found-message {
-
-    margin-top: 220px;
+    position: relative;
     font-family: 'Mont';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
-    line-height: 31px;
     align-items: center;
     text-align: center;
-
+    margin: auto;
     color: #B1B1B1;
+    width: 50%;
+    align-self: center;
+    height: 312px;
 
-
-    /* Inside auto layout */
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    /*!* Inside auto layout *!*/
+    /*order: 1;*/
+    /*flex-grow: 0;*/
 }
 
 #selected {

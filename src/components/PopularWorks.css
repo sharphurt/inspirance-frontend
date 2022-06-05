@@ -6,7 +6,7 @@
     gap: 24px;
 
     flex-wrap: wrap;
-    
+
     /* Inside auto layout */
 
     flex: none;
@@ -16,9 +16,6 @@
 }
 
 .popular-works-list-container {
-}
-
-.nothing-found-message {
+    align-self: stretch;
     height: 312px;
-
 }
