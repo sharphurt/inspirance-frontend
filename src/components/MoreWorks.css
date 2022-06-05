@@ -1,20 +1,20 @@
-.maybe-likes-container {
+.more-works-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px 60px;
     gap: 72px;
 
-    /* Inside auto layout */
-
     align-self: stretch;
+
+    padding-bottom: 64px;
+    border-bottom: 1px solid #E6E1DB;
 
     flex: none;
     order: 2;
     flex-grow: 0;
 }
 
-.maybe-likes-inner-container {
+.more-works-inner-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -29,20 +29,17 @@
     flex-grow: 0;
 }
 
-.maybe-likes-header {
+.more-works-header {
     height: 31px;
+
     /* headers/h2 */
 
     font-family: 'Mont';
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
-    line-height: 31px;
-    /* identical to box height */
 
     color: #000000;
-
-    /* Inside auto layout */
 
     flex: none;
     order: 0;
@@ -60,20 +57,5 @@
 
     flex: none;
     order: 1;
-    flex-grow: 0;
-}
-
-.line {
-    width: 100%;
-    height: 0px;
-
-    /* interface/card grey */
-
-    border: 1px solid #E6E1DB;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
     flex-grow: 0;
 }

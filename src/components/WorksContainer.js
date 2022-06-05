@@ -1,5 +1,5 @@
-import React, {Component, useEffect, useMemo, useState} from "react";
-import PopularWorkItem from "./PopularWorkItem";
+import React from "react";
+import PopularWorkItemSmall from "./PopularWorkItemSmall";
 import "./WorksContainer.css"
 import "./PopularWorks.css"
 import {Works} from "../data/Works/Works";
@@ -13,7 +13,7 @@ export default function WorksContainer({data}) {
 			<div className="works-list-container">
 				<div className="popular-works-list">
 					{works.map((element, index) => (
-						<PopularWorkItem data={element}/>
+						<PopularWorkItemSmall data={element}/>
 					))}
 				</div>
 				{
@@ -26,9 +26,6 @@ export default function WorksContainer({data}) {
 						</>
 				}
 			</div>
-
-
 		</div>
 	)
-
 }

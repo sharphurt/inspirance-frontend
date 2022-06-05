@@ -2,7 +2,7 @@ import React, {Component, useEffect, useMemo, useState} from "react";
 import TaskItem from "./TaskItem";
 import "./TaskContainer.css"
 import "./PopularWorks.css"
-import PopularWorkItem from "./PopularWorkItem";
+import PopularWorkItemSmall from "./PopularWorkItemSmall";
 import {bestWorks} from "../data/BestWorks";
 
 export default function PopularWorks({data}) {
@@ -59,7 +59,7 @@ export default function PopularWorks({data}) {
 				<div className="popular-works-list-container">
 					<div className="popular-works-list">
 						{filteredList.slice(0, 4).map((element, index) => (
-							<PopularWorkItem data={element}/>
+							<PopularWorkItemSmall data={element}/>
 						))}
 					</div>
 					{

@@ -1,0 +1,139 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+
+    width: 1176px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.main-image {
+    width: 1176px;
+    height: 654px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.thumbnails-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    gap: 32px;
+
+    height: 101px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    height: 101px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.thumbnail {
+    width: 160px;
+    height: 101px;
+
+    border-radius: 8px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#selected-thumbnail {
+    border: 3px solid #504EFF;
+}
+
+.button-image-back {
+    position: relative;
+    margin-right: -72px;
+    box-sizing: border-box;
+
+    width: 40px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 100px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.button-image-back-icon {
+    position: relative;
+    margin-top: -3px;
+    margin-left: -1px;
+}
+
+.button-image-forward {
+    box-sizing: border-box;
+
+    position: relative;
+
+    margin-left: -72px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 100px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.button-image-forward-icon {
+    position: relative;
+    margin-bottom: 3px;
+    margin-right: -2px;
+
+}
+
+.main-image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.thumbnail-button {
+    background: none;
+    border: none;
+}
+
+.thumbnail-button:active {
+    outline: 0;
+}
+
+.thumbnail-button:focus {
+    outline: 0;
+}
