@@ -1,10 +1,9 @@
 .task-container {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px 60px;
     gap: 48px;
-    height: 754px;
 
     /* Inside auto layout */
 
@@ -15,7 +14,7 @@
 }
 
 .task-container-name {
-     height: 46px;
+    height: 46px;
     align-self: stretch;
 
     /* headers/h1 */
@@ -43,8 +42,6 @@
     padding: 0px;
     gap: 32px;
     align-self: stretch;
-
-    height: 560px;
 
     /* Inside auto layout */
 
@@ -108,7 +105,6 @@
 }
 
 .task-list-container {
-    height: 476px;
     align-self: stretch;
 
 
@@ -120,14 +116,15 @@
 }
 
 .task-list {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+    align-items: start;
+    padding: 0;
+    grid-gap: 26px;
     gap: 26px;
     align-self: stretch;
-
-    height: 225px;
+    flex-grow: 0;
+    flex-wrap: wrap;
 
 
     /* Inside auto layout */
@@ -135,8 +132,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-
-    flex-wrap: wrap;
 }
 
 .nothing-found-message {

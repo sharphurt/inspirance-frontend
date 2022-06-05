@@ -1,12 +1,11 @@
-import React, {Component, useMemo} from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import "./AllTasks.css"
 import {useState} from "react";
 
 import MultiRangeSlider from "multi-range-slider-react";
 import Header from "./Header";
 import TaskContainer from "./TaskContainer";
- import {EducationTasks} from "../data/Tasks/Education";
+import {EducationTasks} from "../data/Tasks/Education";
 import {FashionTasks} from "../data/Tasks/Fashion";
 import {FoodTasks} from "../data/Tasks/Food";
 import {SportTasks} from "../data/Tasks/Sport";
@@ -48,10 +47,10 @@ export default function AllTasks() {
 	tasks.header = "Задания для вас"
 
 	return (
-		<>
+		<div className="all-tasks-pageflow">
 			<Header/>
-			<div>
-				<div className="menu-container">
+			<div className="content-with-footer-container">
+				<div className="all-tasks-content">
 					<div className="menu">
 						<div className="rb-group-container">
 							<div className="menu-header">Тематика</div>
@@ -139,17 +138,17 @@ export default function AllTasks() {
 											  }}
 							/>
 						</div>
+						{/*</div>*/}
+					</div>
+
+					<div id="tasks" className="tasks">
+						{console.log(tasks)}
+						<TaskContainer data={tasks}/>
 					</div>
 				</div>
+			</div>
+			<Footer/>
 
-				<div id="tasks" className="tasks">
-					{console.log(tasks)}
-					<TaskContainer data={tasks}/>
-				</div>
-			</div>
-			<div className="footer-container footer-container-1">
-				<Footer/>
-			</div>
-		</>
+		</div>
 	)
 }

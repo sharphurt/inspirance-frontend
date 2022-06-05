@@ -10,14 +10,18 @@
     padding: 28px 57px;
     gap: 1204px;
 
-    position: relative;
+    border: 1px solid #E6E1DB;
+    flex: none;
+    flex-grow: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: 104px;
-    order: 10000;
 
     margin-top: 160px;
 
-    border: 1px solid #E6E1DB;
+    height: 104px;
+
 }
 
 .footer-email {

@@ -1,0 +1,91 @@
+.maybe-likes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 60px;
+    gap: 72px;
+
+    width: 1601px;
+    height: 360px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.maybe-likes-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    width: 1481px;
+    height: 288px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.maybe-likes-header {
+    width: 345px;
+    height: 31px;
+
+    /* headers/h2 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 31px;
+    /* identical to box height */
+
+    color: #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.maybe-likes-items-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 1476px;
+    height: 225px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.line {
+    width: 1476px;
+    height: 0px;
+
+    /* interface/card grey */
+
+    border: 1px solid #E6E1DB;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
