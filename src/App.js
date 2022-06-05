@@ -15,6 +15,8 @@ import Logout from "./components/Logout";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import AllTasks from "./components/AllTasks";
+import AboutTask from "./components/AboutTask";
+import TaskDescriptionPage from "./components/TaskDescriptionPage";
 
 const App = () => {
 	const {user: currentUser} = useSelector((state) => state.auth);
@@ -37,6 +39,7 @@ const App = () => {
 						<Route exact path="/logout" component={Logout}/>
 						<Route exact path="/profile" component={Profile}/>
 						<Route exact path="/tasks" component={AllTasks}/>
+						<Route exact path="/task/:taskId" component={TaskDescriptionPage}/>
 					</Switch>
 				</div>
 

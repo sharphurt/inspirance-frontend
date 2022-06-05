@@ -1,24 +1,23 @@
 import React from "react";
 import "./AllTasks.css"
 import {useState} from "react";
+import {
+	BrowserRouter as Router,
+	Link,
+	useLocation
+} from "react-router-dom";
 
 import MultiRangeSlider from "multi-range-slider-react";
 import Header from "./Header";
 import TaskContainer from "./TaskContainer";
-import {EducationTasks} from "../data/Tasks/Education";
-import {FashionTasks} from "../data/Tasks/Fashion";
-import {FoodTasks} from "../data/Tasks/Food";
-import {SportTasks} from "../data/Tasks/Sport";
-import {TechnologiesTasks} from "../data/Tasks/Technologies";
 import Footer from "./Footer";
+import {AllTasksData} from "../data/Tasks/AllTasks";
 
 export default function AllTasks() {
 	const [minValue, set_minValue] = useState(3);
 	const [maxValue, set_maxValue] = useState(20);
 
-	var allTasks = EducationTasks.concat(FashionTasks).concat(FoodTasks).concat(SportTasks).concat(TechnologiesTasks)
-
-	const [tasks, setTasks] = useState(allTasks)
+	const [tasks, setTasks] = useState(AllTasksData)
 	const [category, setCategory] = useState("")
 
 	const handleSlider = (e) => {
@@ -28,12 +27,18 @@ export default function AllTasks() {
 		setTasks(getFiltered(category, e.minValue, e.maxValue))
 	};
 
+	function useQuery() {
+		const { search } = useLocation();
+
+		return React.useMemo(() => new URLSearchParams(search), [search]);
+	}
+
 	function getFiltered(category, minDate, maxDate) {
 		let categoryFiltered;
 		if (category === "") {
-			categoryFiltered = allTasks;
+			categoryFiltered = AllTasksData;
 		} else {
-			categoryFiltered = allTasks.filter((task) => task.category === category)
+			categoryFiltered = AllTasksData.filter((task) => task.category === category)
 		}
 
 		return categoryFiltered.filter((task) => task.deadline >= minDate && task.deadline <= maxDate)
@@ -46,10 +51,14 @@ export default function AllTasks() {
 
 	tasks.header = "Задания для вас"
 
+	let query = useQuery();
+
+	tasks.categoryFilter = query.get("filter")
+
 	return (
 		<div className="all-tasks-pageflow">
 			<Header/>
-			<div className="content-with-footer-container">
+			<div className="content-without-footer-container">
 				<div className="all-tasks-content">
 					<div className="menu">
 						<div className="rb-group-container">
@@ -142,7 +151,6 @@ export default function AllTasks() {
 					</div>
 
 					<div id="tasks" className="tasks">
-						{console.log(tasks)}
 						<TaskContainer data={tasks}/>
 					</div>
 				</div>

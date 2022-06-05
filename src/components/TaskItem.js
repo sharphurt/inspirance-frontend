@@ -3,7 +3,7 @@ import "./TaskItem.css"
 
 export default function TaskItem({data}) {
 	return (
-		<div className="task-item">
+		<a href={`/task/${data.id}`}  className="task-item">
 			<div className="data">
 				<div className="name-type-container">
 					<div className="task-theme">
@@ -25,6 +25,6 @@ export default function TaskItem({data}) {
 
 			</div>
 			<img className="task-icon" src={data.img}/>
-		</div>
+		</a>
 	)
 }

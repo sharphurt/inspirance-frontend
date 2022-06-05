@@ -1,24 +1,13 @@
-.about-task-container {
-    height: 598px;
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
 .about-task-flow {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 80px 60px;
     gap: 64px;
 
-    position: absolute;
-    width: 778px;
-    height: 442px;
-    left: 62px;
-    top: 78px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
 }
 
 .company-description-container {
@@ -27,9 +16,6 @@
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-
-    width: 778px;
-    height: 165px;
 
 
     /* Inside auto layout */
@@ -42,7 +28,6 @@
 
 .company-description-header {
     width: 778px;
-    height: 51px;
 
     /* headers/h1 */
 
@@ -65,7 +50,6 @@
 
 .company-description {
     width: 778px;
-    height: 90px;
 
     font-family: 'Mont';
     font-style: normal;
@@ -94,7 +78,6 @@
     gap: 24px;
 
     width: 778px;
-    height: 213px;
 
 
     /* Inside auto layout */
@@ -107,7 +90,6 @@
 
 .task-description-header {
     width: 778px;
-    height: 51px;
 
     /* headers/h1 */
 
@@ -130,7 +112,6 @@
 
 .task-description {
     width: 778px;
-    height: 138px;
 
     font-family: 'Mont';
     font-style: normal;

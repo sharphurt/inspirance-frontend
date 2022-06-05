@@ -316,7 +316,7 @@
     gap: 165px;
 }
 
-.content-with-footer-container {
+.content-without-footer-container {
     display: table-row;
     height: 100%;
 }

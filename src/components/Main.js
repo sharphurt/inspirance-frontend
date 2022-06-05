@@ -27,7 +27,9 @@ export default function Main({data}) {
 							</div>
 							<div className="banner-text">Выполняйте задания, прокачивайте навыки, становитесь лучше!
 							</div>
-							<button className="tasks-button">К заданиям</button>
+							<a className="tasks-button" href="\tasks">
+								<button className="tasks-button">К заданиям</button>
+							</a>
 						</div>
 						<img className="banner-img" src={require("../img/banner-img.png")}/>
 					</div>

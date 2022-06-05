@@ -167,3 +167,15 @@
 
     color: #504EFF;
 }
+
+.tasks-button:focus {
+    outline-width: 2px !important;
+    outline-color: #504EFF !important;
+}
+
+
+.tasks-button:hover {
+    outline-width: 2px !important;
+    outline-color: #504EFF !important;
+
+}

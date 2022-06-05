@@ -5,14 +5,20 @@
     padding: 0px;
     gap: 24px;
 
-    width: 1480px;
-    height: 312px;
-
-
+    flex-wrap: wrap;
+    
     /* Inside auto layout */
 
     flex: none;
     order: 2;
     align-self: stretch;
     flex-grow: 0;
+}
+
+.popular-works-list-container {
+}
+
+.nothing-found-message {
+    height: 312px;
+
 }

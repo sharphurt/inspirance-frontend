@@ -1,30 +1,33 @@
-.task-description-page-flow {
+.task-description-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     padding: 0px;
-    gap: 16px;
 
-    position: absolute;
-    height: 1602px;
+    position: relative;
     left: 0px;
     right: 0px;
-    top: 96px;
+    margin-top: 100px;
+
 }
 
 .page-header-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 80px 60px;
+    gap: 10px;
 
-    width: 1602px;
-    height: 612px;
+    height: 506px;
+
+    background: #DCE8FF;
 
     /* Inside auto layout */
 
     flex: none;
     order: 0;
+    align-self: stretch;
     flex-grow: 0;
 }
 
@@ -32,18 +35,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 916px;
-
-    width: 1478px;
-    height: 346px;
 
 
     /* Inside auto layout */
 
     flex: none;
     order: 0;
+    align-self: stretch;
     flex-grow: 0;
 }
 
@@ -54,7 +55,6 @@
     padding: 0px;
     gap: 48px;
 
-    width: 350px;
     height: 346px;
 
 
@@ -72,10 +72,6 @@
     padding: 0px;
     gap: 8px;
 
-    width: 188px;
-    height: 18px;
-
-
     /* Inside auto layout */
 
     flex: none;
@@ -90,10 +86,6 @@
     padding: 0px;
     gap: 36px;
 
-    width: 350px;
-    height: 180px;
-
-
     /* Inside auto layout */
 
     flex: none;
@@ -102,9 +94,6 @@
 }
 
 .project-name {
-    width: 350px;
-    height: 44px;
-
     font-family: 'Mont';
     font-style: normal;
     font-weight: 800;
@@ -129,10 +118,6 @@
     align-items: flex-start;
     padding: 0px;
     gap: 16px;
-
-    width: 137px;
-    height: 100px;
-
 
     /* Inside auto layout */
 
@@ -276,4 +261,132 @@
     order: 1;
     align-self: stretch;
     flex-grow: 0;
+}
+
+.task-tabs-container {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 64px;
+
+    height: 106px;
+
+    background: #FFFFFF;
+    border: 1px solid #E6E1DB;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.about-task-container {
+    height: 598px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.task-description-page-flow {
+    position: absolute;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    display: table;
+}
+
+.task-description-content-container {
+    margin-top: 100px;
+    display: table-row;
+    height: 100%;
+}
+
+.unselected-tab {
+    height: 26px;
+    border: none;
+    background-color: white;
+
+    /* menu2 */
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* txt */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.unselected-tab:active {
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+
+.unselected-tab:focus {
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+#selected-tab {
+    font-weight: 700 !important;
+}
+
+.task-description-works-container {
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    align-self: stretch;
+}
+
+.crumbs > div {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.crumbs > a {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #000000;
 }

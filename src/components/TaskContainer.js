@@ -5,7 +5,7 @@ import "./TaskContainer.css"
 export default function TaskContainer({data}) {
 	const [taskList, setTaskList] = useState([]);
 
-	const [selectedCategory, setSelectedCategory] = useState();
+	const [selectedCategory, setSelectedCategory] = useState(data.categoryFilter);
 
 	useEffect(() => {
 		setTaskList(data);
@@ -19,25 +19,32 @@ export default function TaskContainer({data}) {
 	}
 
 	function handleFilter(e) {
+		data.categoryFilter = undefined
 		let category = e.target.value;
-		var buttons = document.getElementsByClassName("select-button")
-		for (var i = 0; i < buttons.length; i++) {
+		const buttons = document.getElementsByClassName("select-button");
+		for (let i = 0; i < buttons.length; i++) {
 			buttons[i].id = ""
 		}
 		e.target.id = "selected"
 		setSelectedCategory(category)
 	}
 
+	const buttons = document.getElementsByClassName("select-button");
+
+	for (let i = 0; i < buttons.length; i++) {
+		if (buttons[i].value === data.categoryFilter)
+			buttons[i].id = "selected"
+	}
+
 
 	return (
 		<div className="task-container">
-			{/*{console.log(getFilteredList())}*/}
 			<div className="task-container-name">
 				{data.header}
 			</div>
 			<div className="task-filter">
 				<div className="filter-buttons-container">
-					<button className="select-button" id="selected" value="" onClick={handleFilter}>Все</button>
+					<button className="select-button" value="" onClick={handleFilter}>Все</button>
 					<button className="select-button" value="Иллюстрации" onClick={handleFilter}>Иллюстрации</button>
 					<button className="select-button" value="Логотипы" onClick={handleFilter}>Логотипы</button>
 					<button className="select-button" value="Сайты" onClick={handleFilter}>Сайты</button>
