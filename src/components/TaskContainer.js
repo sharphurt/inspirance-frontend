@@ -36,7 +36,6 @@ export default function TaskContainer({data}) {
 			buttons[i].id = "selected"
 	}
 
-
 	return (
 		<div className="task-container">
 			<div className="task-container-name">
@@ -44,7 +43,12 @@ export default function TaskContainer({data}) {
 			</div>
 			<div className="task-filter">
 				<div className="filter-buttons-container">
-					<button className="select-button" value="" onClick={handleFilter}>Все</button>
+					{
+						data.categoryFilter
+							? <button className="select-button" value="" onClick={handleFilter}>Все</button>
+							: <button className="select-button" value="" id="selected" onClick={handleFilter}>Все</button>
+
+					}
 					<button className="select-button" value="Иллюстрации" onClick={handleFilter}>Иллюстрации</button>
 					<button className="select-button" value="Логотипы" onClick={handleFilter}>Логотипы</button>
 					<button className="select-button" value="Сайты" onClick={handleFilter}>Сайты</button>
