@@ -3,7 +3,7 @@ import TaskItem from "./TaskItem";
 import "./TaskContainer.css"
 import "./PopularWorks.css"
 import PopularWorkItemSmall from "./PopularWorkItemSmall";
-import {bestWorks} from "../data/BestWorks";
+import {Works} from "../data/Works/Works";
 
 export default function PopularWorks({data}) {
 
@@ -12,7 +12,7 @@ export default function PopularWorks({data}) {
 	const [selectedCategory, setSelectedCategory] = useState();
 
 	useEffect(() => {
-		setWorksList(bestWorks);
+		setWorksList(Works);
 	}, []);
 
 	function getFilteredList() {
