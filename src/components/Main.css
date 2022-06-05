@@ -5,7 +5,7 @@
 
 .page-flow {
     flex: 1;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
@@ -14,13 +14,14 @@
     order: 1;
     flex-grow: 0;
     position: relative;
-    width: 1600px;
-    height: 2193px;
-    left: calc(50% - 1600px/2);
+    width: 1605px;
+    left: calc(50% - 1605px/2);
 }
 
 .page-content {
-    display: flex;
+    position: absolute;
+    top:104px;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
@@ -28,8 +29,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    height: 2193px;
-    top: 93px;
     width: 100%;
     margin-bottom: 160px;
 }
@@ -178,4 +177,9 @@
     outline-width: 2px !important;
     outline-color: #504EFF !important;
 
+}
+
+.main-page-footer-container {
+    order: 1000;
+    align-self: stretch;
 }

@@ -36,8 +36,10 @@ export default function Main({data}) {
 					<TaskContainer data={tasks}/>
 					<PopularWorks/>
 				</div>
+				<div className="main-page-footer-container">
+					<Footer/>
+				</div>
 			</div>
-			<Footer/>
 
 		</div>
 

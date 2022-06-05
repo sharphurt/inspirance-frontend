@@ -10,7 +10,7 @@ export default function WorksContainer({data}) {
 
 	return (
 		<div>
-			<div className="popular-works-list-container">
+			<div className="works-list-container">
 				<div className="popular-works-list">
 					{works.map((element, index) => (
 						<PopularWorkItem data={element}/>
