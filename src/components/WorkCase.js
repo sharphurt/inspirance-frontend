@@ -36,7 +36,7 @@ export default function WorkCase() {
 									<div className="user-info-name">{work.name}</div>
 									<button className="subscribe-button">Подписаться</button>
 								</div>
-								<div className="for-who">для <div className="for-who-name">{`${task.name}`}</div></div>
+								<div className="for-who">для <a href={`/task/${task.id}`} className="for-who-name">{`${task.name}`}</a></div>
 							</div>
 						</div>
 						{
