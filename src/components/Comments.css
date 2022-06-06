@@ -126,8 +126,6 @@
     padding: 0px;
     gap: 16px;
 
-    height: 64px;
-
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -152,7 +150,6 @@
     gap: 8px;
 
     width: 310px;
-    height: 56px;
 
     flex: none;
     order: 1;
@@ -220,6 +217,10 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
+
+    width: 1198px;
+
+    overflow-wrap: anywhere;
 
     flex: none;
     order: 1;

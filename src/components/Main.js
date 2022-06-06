@@ -6,11 +6,12 @@ import TaskContainer from "./TaskContainer";
 import PopularWorks from "./PopularWorks";
 import Footer from "./Footer";
 import {lastTasks} from "../data/Tasks/LastTasks";
+import {AllTasksData} from "../data/Tasks/AllTasks";
 
 
 export default function Main({data}) {
 
-	var tasks = lastTasks;
+	var tasks = AllTasksData.sort(() => 0.5 - Math.random()).slice(0, 6);
 	tasks.showMoreButton = true;
 	tasks.header = "Новые задания"
 
