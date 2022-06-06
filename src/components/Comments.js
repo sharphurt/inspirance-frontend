@@ -25,7 +25,7 @@ export default function Comments({work}) {
 			text: `${comment}`
 		})
 
-		localStorage.setItem("Comments", CommentsData)
+		localStorage.setItem("Comments", JSON.stringify(CommentsData))
 
 		setComment("")
 	}
