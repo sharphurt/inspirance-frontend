@@ -146,12 +146,19 @@
     border: 2px solid #E6E1DB;
     border-radius: 8px;
     cursor: pointer;
+    justify-content: center; align-items: center;
+    display: flex;
+
 }
 
 .add-image-button-icon {
-    position: relative;
-    left: 42.47%;
-    right: 42.53%;
-    top: 38.61%;
-    bottom: 37.62%;
+    /*position: relative;*/
+    width: 24px;
+    height: auto;
+    /*margin: 0 auto;*/
+    /*padding: 10px;*/
+    /*!*left: 42.47%;*!*/
+    /*!*right: 42.53%;*!*/
+    /*!*top: 37%;*!*/
+    /*!*bottom: 37%;*!*/
 }

@@ -13,8 +13,8 @@ export default function CardContainer({data}) {
 			<div className="cards">
 				{data.elements.map((value) => {
 					return <ImageCard data={{
-						src: value,
-						link: value
+						src: value.img,
+						link: `/work/${value.workId}`
 					}} />
 				})}
 			</div>

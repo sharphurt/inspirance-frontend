@@ -281,6 +281,8 @@
 
     background: #FFFFFF;
 
+    align-self: stretch;
+
     flex: none;
     order: 2;
     flex-grow: 0;

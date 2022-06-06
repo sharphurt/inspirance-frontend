@@ -6,6 +6,7 @@ import CardContainer from "../components/CardContainer";
 import Footer from "../components/Footer";
 import {MyWorks} from "../data/MyWorks";
 import {MyProfile} from "../data/MyProfile";
+import {WorkImages} from "../data/Works/WorkImages";
 
 export default class ProfilePage extends Component {
 
@@ -33,7 +34,12 @@ export default class ProfilePage extends Component {
 
 					<CardContainer data={{
 						text: "Мои работы",
-						elements: MyWorks.map(value => value.img)
+						elements: MyWorks.map(value => {
+							return ({
+								img: WorkImages.filter(work => work.workId === value.workId)[0].images[0].original,
+								workId: value.workId
+							})
+						})
 					}}/>
 				</div>
 				<div className="footer-container">

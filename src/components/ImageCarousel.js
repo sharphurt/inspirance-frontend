@@ -9,7 +9,6 @@ export default function ImageCarousel({work}) {
 	if (workImages === undefined)
 		workImages = [
 			{
-				thumbnail: work.preview,
 				original: work.preview
 			}
 		]
@@ -65,8 +64,8 @@ export default function ImageCarousel({work}) {
 								<div className="thumbnail-container">
 									{
 										currentImageIndex === index
-											? <img className="thumbnail" id="selected-thumbnail" src={image.thumbnail}/>
-											: <img className="thumbnail" src={image.thumbnail}/>
+											? <img className="thumbnail" id="selected-thumbnail" src={image.original}/>
+											: <img className="thumbnail" src={image.original}/>
 									}
 								</div>
 							</button>)

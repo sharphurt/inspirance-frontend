@@ -6,7 +6,7 @@ export default function Comments({work}) {
 
 	let comments = CommentsData.filter((comment) => comment.workId === work.workId)
 
-	const [comment, setComment] = useState()
+	const [comment, setComment] = useState("")
 
 	function changeCommentInputHandler(event) {
 		setComment(event.target.value)
@@ -14,7 +14,7 @@ export default function Comments({work}) {
 
 	function sendCommentHandler(event) {
 		event.preventDefault();
-		if (comment === undefined)
+		if (comment === undefined || comment === "")
 			return
 
 		CommentsData.push({
@@ -24,6 +24,8 @@ export default function Comments({work}) {
 			date: "Только что",
 			text: `${comment}`
 		})
+
+		localStorage.setItem("Comments", CommentsData)
 
 		setComment("")
 	}

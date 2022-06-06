@@ -13,14 +13,19 @@ import Footer from "../components/Footer";
 export default function WorkCasePage() {
 	const {workId} = useParams();
 
-	const [likeState, setLikeState] = useState(true)
-
 	let work = Works.filter((work) => work.workId === parseInt(workId))[0]
 	let task = AllTasksData.filter((task) => task.id === work.taskId)[0]
 	let worksForTask = Works.filter((work) => work.taskId === task.id);
 
+	const [likeState, setLikeState] = useState(work.yourLike !== 1)
+
 	function likeButtonHandler() {
 		setLikeState(!likeState)
+		Works.filter((work) => work.workId === parseInt(workId))[0].yourLike = likeState ? 1 : 0
+
+		console.log(Works.filter((work) => work.workId === parseInt(workId))[0])
+
+		localStorage.setItem("Works", JSON.stringify(Works))
 	}
 
 	return (
@@ -60,7 +65,7 @@ export default function WorkCasePage() {
 						{work.description}
 					</div>
 					{
-						worksForTask.length > 1 ? <MoreWorks task={task}/> : <></>
+						worksForTask.length > 1 ? <MoreWorks task={task} thisWork={work.workId}/> : <></>
 					}
 					<Comments work={work}/>
 				</div>

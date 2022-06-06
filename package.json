@@ -11,6 +11,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "cors": "^2.8.5",
+    "local-storage": "^2.0.0",
     "multi-range-slider-react": "^1.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -26,6 +27,7 @@
     "redux-thunk": "^2.3.0",
     "validator": "^13.1.1",
     "webpack": "^4.42.0",
+    "write-json-file": "^5.0.0",
     "yup": "^0.32.11"
   },
   "scripts": {

@@ -1,12 +1,16 @@
 import React from "react";
+import ls from 'local-storage'
 
 import {useState} from "react";
 import ImageCarouselWithUpload from "../components/ImageCarouselWithUpload";
-import {useLocation} from "react-router-dom";
+import {useHistory, useLocation} from "react-router-dom";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 import "./AddWorkPage.css"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import {MyWorks} from "../data/MyWorks";
+import {Works} from "../data/Works/Works";
+import {WorkImages} from "../data/Works/WorkImages";
 
 export default function AddWorkPage() {
 	const [uploadedImages, setUploadedImages] = useState([])
@@ -41,6 +45,44 @@ export default function AddWorkPage() {
 	const taskId = parseInt(query.get("task"))
 	const task = AllTasksData.filter(task => task.id === taskId)[0]
 
+	let history = useHistory();
+
+	function uploadButtonHandler() {
+		const thisWorkId = Math.max(...Works.map(work => work.workId)) + 1
+		console.log(thisWorkId)
+		Works.push({
+			taskId: task.id,
+			workId: thisWorkId,
+			name: "Константин Иванов",
+			avatarUrl: require("../img/avatar.png"),
+			preview: uploadedImages[0],
+			themeName: task.themeName,
+			description: aboutWork,
+			likes: 0
+		})
+
+		const images = uploadedImages.map(value => {
+			return ({
+				original: value,
+			})
+		})
+
+		WorkImages.push({
+			workId: thisWorkId,
+			images: images
+		})
+
+		MyWorks.push({
+			workId: thisWorkId
+		})
+
+		localStorage.setItem('Works', JSON.stringify(Works));
+		localStorage.setItem("WorkImages", JSON.stringify(WorkImages))
+		localStorage.setItem("MyWorks", JSON.stringify(MyWorks))
+
+		history.push(`/work/${thisWorkId}`);
+	}
+
 	return (
 		<div className="add-work-page-flow">
 			<Header/>
@@ -53,6 +95,7 @@ export default function AddWorkPage() {
 
 						<div className="upload-button-container">
 							<button className="upload-button button primary-button"
+									onClick={uploadButtonHandler}
 									disabled={uploadedImages.length === 0 || aboutWork === "" || aboutWork === undefined}>
 								<span className="upload-button-icon"/>
 								<div className="upload-button-text">Загрузить работу</div>
