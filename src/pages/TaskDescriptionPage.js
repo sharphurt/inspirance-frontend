@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import Header from "./Header";
-import AboutTask from "./AboutTask";
-import MaybeLikes from "./MaybeLikes";
+import Header from "../components/Header";
+import AboutTask from "../components/AboutTask";
+import MaybeLikes from "../components/MaybeLikes";
 import {useParams} from "react-router-dom";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 import "./TaskDescriptionPage.css"
-import Footer from "./Footer";
-import WorksContainer from "./WorksContainer";
+import Footer from "../components/Footer";
+import WorksContainer from "../components/WorksContainer";
 
 export default function TaskDescriptionPage() {
 

@@ -5,20 +5,20 @@ import {Router, Switch, Route, Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import Login from "./components/Login";
-import Register from "./components/Register";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 import Home from "./components/Home";
-import Profile from "./components/Profile";
+import ProfilePage from "./pages/ProfilePage";
 import {clearMessage} from "./actions/message";
 import {history} from "./helpers/history";
 import Logout from "./components/Logout";
-import Main from "./components/Main";
+import MainPage from "./pages/MainPage";
 import Footer from "./components/Footer";
-import AllTasks from "./components/AllTasks";
+import AllTasksPage from "./pages/AllTasksPage";
 import AboutTask from "./components/AboutTask";
-import TaskDescriptionPage from "./components/TaskDescriptionPage";
+import TaskDescriptionPage from "./pages/TaskDescriptionPage";
 import ImageCarousel from "./components/ImageCarousel";
-import WorkCase from "./components/WorkCase";
+import WorkCasePage from "./pages/WorkCasePage";
 
 const App = () => {
 	const {user: currentUser} = useSelector((state) => state.auth);
@@ -35,14 +35,14 @@ const App = () => {
 			<div>
 				<div>
 					<Switch>
-						<Route exact path={["/", "/home"]} component={Main}/>
-						<Route exact path="/login" component={Login}/>
-						<Route exact path="/register" component={Register}/>
+						<Route exact path={["/", "/home"]} component={MainPage}/>
+						<Route exact path="/login" component={LoginPage}/>
+						<Route exact path="/register" component={RegisterPage}/>
 						<Route exact path="/logout" component={Logout}/>
-						<Route exact path="/profile" component={Profile}/>
-						<Route exact path="/tasks" component={AllTasks}/>
+						<Route exact path="/profile" component={ProfilePage}/>
+						<Route exact path="/tasks" component={AllTasksPage}/>
 						<Route exact path="/task/:taskId" component={TaskDescriptionPage}/>
-						<Route exact path="/work/:workId" component={WorkCase}/>
+						<Route exact path="/work/:workId" component={WorkCasePage}/>
 					</Switch>
 				</div>
 

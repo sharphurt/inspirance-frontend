@@ -1,11 +1,11 @@
 import React from "react";
-import './Register.css';
-import RegisterLogoPanel from "./RegisterLogoPanel";
-import RegisterForm from "./RegisterForm";
+import './RegisterPage.css';
+import RegisterLogoPanel from "../components/RegisterLogoPanel";
+import RegisterForm from "../components/RegisterForm";
 import {NavLink, Redirect} from "react-router-dom";
 import {useSelector} from "react-redux";
 
-const Register = () => {
+const RegisterPage = () => {
 	const {isLoggedIn} = useSelector(state => state.auth);
 
 	if (isLoggedIn) {
@@ -42,4 +42,4 @@ const Register = () => {
 	);
 };
 
-export default Register;
+export default RegisterPage;

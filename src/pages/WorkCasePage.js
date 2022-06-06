@@ -2,22 +2,22 @@ import React, {useState} from "react";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 import {Works} from "../data/Works/Works";
 
-import "./WorkCase.css"
-import ImageCarousel from "./ImageCarousel";
+import "./WorkCasePage.css"
+import ImageCarousel from "../components/ImageCarousel";
 import {useParams} from "react-router-dom";
-import {WorkImages} from "../data/Works/WorkImages";
-import MoreWorks from "./MoreWorks";
-import Comments from "./Comments";
-import Header from "./Header";
-import Footer from "./Footer";
+import MoreWorks from "../components/MoreWorks";
+import Comments from "../components/Comments";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function WorkCase() {
+export default function WorkCasePage() {
 	const {workId} = useParams();
 
 	const [likeState, setLikeState] = useState(true)
 
 	let work = Works.filter((work) => work.workId === parseInt(workId))[0]
 	let task = AllTasksData.filter((task) => task.id === work.taskId)[0]
+	let worksForTask = Works.filter((work) => work.taskId === task.id);
 
 	function likeButtonHandler() {
 		setLikeState(!likeState)
@@ -36,7 +36,8 @@ export default function WorkCase() {
 									<div className="user-info-name">{work.name}</div>
 									<button className="subscribe-button">Подписаться</button>
 								</div>
-								<div className="for-who">для <a href={`/task/${task.id}`} className="for-who-name">{`${task.name}`}</a></div>
+								<div className="for-who">для <a href={`/task/${task.id}`}
+																className="for-who-name">{`${task.name}`}</a></div>
 							</div>
 						</div>
 						{
@@ -58,7 +59,9 @@ export default function WorkCase() {
 					<div className="work-description">
 						{work.description}
 					</div>
-					<MoreWorks task={task}/>
+					{
+						worksForTask.length > 1 ? <MoreWorks task={task}/> : <></>
+					}
 					<Comments work={work}/>
 				</div>
 			</div>

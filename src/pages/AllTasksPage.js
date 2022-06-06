@@ -1,5 +1,5 @@
 import React from "react";
-import "./AllTasks.css"
+import "./AllTasksPage.css"
 import {useState} from "react";
 import {
 	BrowserRouter as Router,
@@ -8,12 +8,12 @@ import {
 } from "react-router-dom";
 
 import MultiRangeSlider from "multi-range-slider-react";
-import Header from "./Header";
-import TaskContainer from "./TaskContainer";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import TaskContainer from "../components/TaskContainer";
+import Footer from "../components/Footer";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 
-export default function AllTasks() {
+export default function AllTasksPage() {
 	const [minValue, set_minValue] = useState(3);
 	const [maxValue, set_maxValue] = useState(20);
 

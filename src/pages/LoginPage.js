@@ -1,11 +1,11 @@
 import React from "react";
 import {useSelector} from "react-redux";
-import {NavLink, Redirect, useHistory} from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 
-import LoginLogoPanel from "./LoginLogoPanel";
-import LoginForm from './LoginForm';
+import LoginLogoPanel from "../components/LoginLogoPanel";
+import LoginForm from '../components/LoginForm';
 
-const Login = (props) => {
+const LoginPage = (props) => {
 	const {isLoggedIn} = useSelector(state => state.auth);
 
 	if (isLoggedIn) {
@@ -40,4 +40,4 @@ const Login = (props) => {
 	);
 };
 
-export default Login;
+export default LoginPage;

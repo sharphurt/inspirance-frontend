@@ -1,15 +1,15 @@
 import {Component} from "react";
 import React from "react";
-import Header from "./Header";
-import "./Main.css"
-import TaskContainer from "./TaskContainer";
-import PopularWorks from "./PopularWorks";
-import Footer from "./Footer";
+import Header from "../components/Header";
+import "./MainPage.css"
+import TaskContainer from "../components/TaskContainer";
+import PopularWorks from "../components/PopularWorks";
+import Footer from "../components/Footer";
 import {lastTasks} from "../data/Tasks/LastTasks";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 
 
-export default function Main({data}) {
+export default function MainPage({data}) {
 
 	var tasks = AllTasksData.sort(() => 0.5 - Math.random()).slice(0, 6);
 	tasks.showMoreButton = true;

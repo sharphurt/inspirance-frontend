@@ -1,5 +1,4 @@
-import React, {Component, useEffect, useMemo, useState} from "react";
-import TaskItem from "./TaskItem";
+import React, {useEffect, useMemo, useState} from "react";
 import "./TaskContainer.css"
 import "./PopularWorks.css"
 import PopularWorkItemSmall from "./PopularWorkItemSmall";

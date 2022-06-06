@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Redirect} from 'react-router-dom';
 import {useSelector} from "react-redux";
 
-import './Profile.css'
+import '../pages/ProfilePage.css'
 
 
 export default function ProfileUserCard({data}) {

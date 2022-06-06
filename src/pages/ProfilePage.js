@@ -1,17 +1,13 @@
 import React, {Component} from "react";
-import {Redirect} from 'react-router-dom';
-import {useSelector} from "react-redux";
-import Header from "./Header";
+import Header from "../components/Header";
 import UserService from "../services/user.service";
-import ProfileUserCard from "./ProfileUserCard";
-import CardContainer from "./CardContainer";
-import Footer from "./Footer";
+import ProfileUserCard from "../components/ProfileUserCard";
+import CardContainer from "../components/CardContainer";
+import Footer from "../components/Footer";
 import {MyWorks} from "../data/MyWorks";
 import {MyProfile} from "../data/MyProfile";
 
-export default class Profile extends Component {
-
-//	user = useSelector((state) => state.auth);
+export default class ProfilePage extends Component {
 
 	constructor(props) {
 		super(props)
