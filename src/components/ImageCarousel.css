@@ -15,7 +15,7 @@
 .main-image {
     width: 1176px;
     height: 654px;
-
+    object-fit: cover;
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -57,6 +57,7 @@
 .thumbnail {
     width: 160px;
     height: 101px;
+    object-fit: cover;
 
     border-radius: 8px;
 
@@ -136,4 +137,21 @@
 
 .thumbnail-button:focus {
     outline: 0;
+}
+
+.add-image-button-container {
+    width: 160px;
+    height: 101px;
+
+    border: 2px solid #E6E1DB;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-image-button-icon {
+    position: relative;
+    left: 42.47%;
+    right: 42.53%;
+    top: 38.61%;
+    bottom: 37.62%;
 }

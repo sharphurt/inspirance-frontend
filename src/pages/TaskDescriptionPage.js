@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Header from "../components/Header";
 import AboutTask from "../components/AboutTask";
 import MaybeLikes from "../components/MaybeLikes";
-import {useParams} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 import "./TaskDescriptionPage.css"
 import Footer from "../components/Footer";
@@ -32,6 +32,11 @@ export default function TaskDescriptionPage() {
 		setShowWorks(true)
 	}
 
+	let history = useHistory();
+
+	function uploadWorkButtonHandler() {
+		history.push(`/upload?task=${task.id}`);
+	}
 
 	return (
 		<div className="task-description-page-flow">
@@ -60,7 +65,8 @@ export default function TaskDescriptionPage() {
 										</div>
 									</div>
 								</div>
-								<button className="upload-button button primary-button">
+								<button className="upload-button button primary-button"
+										onClick={uploadWorkButtonHandler}>
 									<img className="upload-button-icon" src={require("../img/upload.svg")}/>
 									<div className="upload-button-text">Загрузить работу</div>
 								</button>

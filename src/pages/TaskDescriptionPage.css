@@ -216,6 +216,24 @@
     flex-grow: 0;
 }
 
+.upload-button > span {
+
+    background-image: url('../img/upload.svg');
+}
+
+.upload-button:disabled {
+    background: #EFEFEF;
+    border-radius: 30px;
+}
+
+.upload-button:disabled > div {
+    color: #686868;
+}
+
+.upload-button:disabled > span {
+    background: url('../img/upload-gray.svg') no-repeat;
+}
+
 .upload-button-icon {
     width: 16px;
     height: 16px;

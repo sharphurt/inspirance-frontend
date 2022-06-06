@@ -1,0 +1,193 @@
+.upload-work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: relative;
+    width: 1480px;
+    height: 1521px;
+    left: calc(50% - 1480px/2);
+    margin-top: 154px;
+
+}
+
+.cancel-upload-work-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1115px;
+
+    width: 1480px;
+    height: 52px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.cancel-uploading-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 32px;
+    gap: 8px;
+
+    width: 130px;
+    height: 52px;
+
+    background: white;
+
+    /* field/text example */
+
+    border: 1px solid #686868;
+    border-radius: 30px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #686868;
+}
+
+.upload-button-container {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.upload-work-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+
+    width: 1278px;
+    height: 1469px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.upload-work-header {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.upload-work-form-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 64px;
+
+    width: 1278px;
+    height: 1319px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.upload-work-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+
+    width: 1176px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.about-work-input {
+    width: 1278px;
+    height: 400px;
+
+    padding-top: 48px;
+    border-top: 1px solid #E6E1DB;
+    border-bottom: 1px solid #E6E1DB;
+    border-left: none;
+    border-right: none;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    outline: none;
+
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    resize: none;
+}
+
+.upload-instruction {
+    cursor: pointer;
+    position: relative;
+    width: 500px;
+    height: 482.25px;
+    left: calc(50% - 500px/2);
+    top: calc(50% - 482.25px/2);
+}
+
+.add-image-button {
+    display: none;
+}
+
+.upload-files-instruction-banner {
+    border: 2px solid #E6E1DB;
+    border-radius: 24px;
+    width: 1176px;
+    height: 654px;
+}
+
+.add-work-page-flow {
+    position: absolute;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    min-width: 100%;
+    display: table;
+}
+
+.upload-work-outer-container {
+    display: table-row;
+    height: 100%;
+}

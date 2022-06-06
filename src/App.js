@@ -19,6 +19,8 @@ import AboutTask from "./components/AboutTask";
 import TaskDescriptionPage from "./pages/TaskDescriptionPage";
 import ImageCarousel from "./components/ImageCarousel";
 import WorkCasePage from "./pages/WorkCasePage";
+import ImageCarouselWithUpload from "./components/ImageCarouselWithUpload";
+import AddWorkPage from "./pages/AddWorkPage";
 
 const App = () => {
 	const {user: currentUser} = useSelector((state) => state.auth);
@@ -43,6 +45,7 @@ const App = () => {
 						<Route exact path="/tasks" component={AllTasksPage}/>
 						<Route exact path="/task/:taskId" component={TaskDescriptionPage}/>
 						<Route exact path="/work/:workId" component={WorkCasePage}/>
+						<Route exact path="/upload" component={AddWorkPage}/>
 					</Switch>
 				</div>
 
