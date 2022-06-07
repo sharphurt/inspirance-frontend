@@ -4,17 +4,20 @@ import "./WorksContainer.css"
 import "./PopularWorks.css"
 import {Works} from "../data/Works/Works";
 
-export default function WorksContainer({data}) {
+export default function WorksContainer({data, excludedWorkIds}) {
 
-	const works = Works.filter((work) => work.taskId === data.id)
+	const works = Works.filter((work) => work.taskId === data.id || (excludedWorkIds !== undefined && excludedWorkIds.includes(work.workId)))
 
 	return (
 		<div>
 			<div className="works-list-container">
 				<div className="popular-works-list">
-					{works.map((element, index) => (
+					{
+						works.map((element) => (
 						<PopularWorkItemSmall data={element}/>
-					))}
+					)).sort(function(a, b) {
+							return (a.likes + a.yourLike ? 1 : 0) - (b.likes + b.yourLike ? 1 : 0);
+						})}
 				</div>
 				{
 					works.length === 0 ?

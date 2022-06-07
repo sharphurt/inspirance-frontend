@@ -23,8 +23,6 @@ export default function WorkCasePage() {
 		setLikeState(!likeState)
 		Works.filter((work) => work.workId === parseInt(workId))[0].yourLike = likeState ? 1 : 0
 
-		console.log(Works.filter((work) => work.workId === parseInt(workId))[0])
-
 		localStorage.setItem("Works", JSON.stringify(Works))
 	}
 

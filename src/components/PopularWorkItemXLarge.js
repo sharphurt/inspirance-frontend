@@ -1,11 +1,12 @@
 import React, {Component} from "react";
-import "./PopularWorkItemLarge.css"
+import "./PopularWorkItemXLarge.css"
 
 
-export default function PopularWorkItemLarge({work}) {
+export default function PopularWorkItemXLarge({work, place}) {
 	return (
-		<a href={`/work/${work.workId}`} className="item-container-large">
-			<img className="preview-large" src={work.preview} />
+		<a href={`/work/${work.workId}`} className="item-container-x-large">
+			<div className="place-indicator">{place}</div>
+			<img className="preview-x-large" src={work.preview} />
 			<div className="item-info">
 				<div className="avatar-container">
 					<img className="avatar" src={work.avatarUrl}/>

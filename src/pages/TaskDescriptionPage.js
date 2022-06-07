@@ -2,13 +2,23 @@ import React, {useState} from "react";
 import Header from "../components/Header";
 import AboutTask from "../components/AboutTask";
 import MaybeLikes from "../components/MaybeLikes";
-import {useHistory, useParams} from "react-router-dom";
+import {useHistory, useLocation, useParams} from "react-router-dom";
 import {AllTasksData} from "../data/Tasks/AllTasks";
 import "./TaskDescriptionPage.css"
 import Footer from "../components/Footer";
 import WorksContainer from "../components/WorksContainer";
 
 export default function TaskDescriptionPage() {
+
+
+	function useQuery() {
+		const { search } = useLocation();
+		return React.useMemo(() => new URLSearchParams(search), [search]);
+	}
+
+	let query = useQuery();
+
+	let tab = query.get("tab")
 
 	const {taskId} = useParams();
 
@@ -18,7 +28,7 @@ export default function TaskDescriptionPage() {
 
 	const task = getTask(taskId);
 
-	const [showWorks, setShowWorks] = useState(false)
+	const [showWorks, setShowWorks] = useState(tab === "works")
 
 	function aboutTaskTabHandler() {
 		document.getElementsByClassName("works")[0].id = ""
@@ -74,12 +84,23 @@ export default function TaskDescriptionPage() {
 							<img className="task-description-image" src={task.img}/>
 						</div>
 					</div>
-					<div className="task-tabs-container">
-						<button id="selected-tab" className="unselected-tab about-task" onClick={aboutTaskTabHandler}>О
-							задании
-						</button>
-						<button className="unselected-tab works" onClick={worksTabHandler}>Работы</button>
-					</div>
+					{
+						showWorks
+							? <div className="task-tabs-container">
+								<button className="unselected-tab about-task"
+										onClick={aboutTaskTabHandler}>О
+									задании
+								</button>
+								<button id="selected-tab" className="unselected-tab works" onClick={worksTabHandler}>Работы</button>
+							</div>
+							: <div className="task-tabs-container">
+								<button id="selected-tab" className="unselected-tab about-task"
+										onClick={aboutTaskTabHandler}>О
+									задании
+								</button>
+								<button className="unselected-tab works" onClick={worksTabHandler}>Работы</button>
+							</div>
+					}
 					{
 						showWorks
 							?

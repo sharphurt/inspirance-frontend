@@ -13,7 +13,7 @@ export default function PopularWorkItemSmall({data: work}) {
 				</div>
 				<div className="likes-container">
 					<img className="like-icon" src={require("../img/heart.svg")} />
-					<div className="likes-count">{work.likes}</div>
+					<div className="likes-count">{work.likes + (work.yourLike ? 1 : 0)}</div>
 				</div>
 			</div>
 		</a>
