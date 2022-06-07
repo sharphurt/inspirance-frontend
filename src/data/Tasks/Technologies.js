@@ -12,7 +12,7 @@ export const TechnologiesTasks = [
 		category: "Technologies",
 		worksCount: "1 работа",
 		daysLeft: "Осталось 3 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fire.png")
 	},
 	{
 		id: 15,
@@ -27,7 +27,7 @@ export const TechnologiesTasks = [
 		category: "Technologies",
 		worksCount: "3 работы",
 		daysLeft: "Осталося 2 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fire.png")
 	},
 	{
 		id: 16,
@@ -42,6 +42,6 @@ export const TechnologiesTasks = [
 		category: "Technologies",
 		worksCount: "17 работ",
 		daysLeft: "Осталось 10 дней",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fire.png")
 	},
 ]

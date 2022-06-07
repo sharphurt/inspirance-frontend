@@ -12,7 +12,7 @@ export const FashionTasks = [
 		category: "Fashion",
 		worksCount: "9 работ",
 		daysLeft: "Осталось 7 дней",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fashoin.png")
 	},
 	{
 		id: 5,
@@ -27,7 +27,7 @@ export const FashionTasks = [
 		category: "Fashion",
 		worksCount: "2 работы",
 		daysLeft: "Осталось 2 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fashoin.png")
 	},
 	{
 		id: 6,
@@ -42,7 +42,7 @@ export const FashionTasks = [
 		category: "Fashion",
 		worksCount: "4 работы",
 		daysLeft: "Осталось 3 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fashoin.png")
 	},
 	{
 		id: 7,
@@ -57,6 +57,6 @@ export const FashionTasks = [
 		category: "Fashion",
 		worksCount: "7 работ",
 		daysLeft: "Остался 1 день",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/fashoin.png")
 	},
 ]

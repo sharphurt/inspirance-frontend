@@ -12,7 +12,7 @@ export const SportTasks = [
 		deadline: 3,
 		worksCount: "27 работ",
 		daysLeft: "Остался 1 день",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/gym.png")
 	},
 	{
 		id: 12,
@@ -27,7 +27,7 @@ export const SportTasks = [
 		category: "Sport",
 		worksCount: "109 работ",
 		daysLeft: "Осталось 4 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/gym.png")
 	},
 	{
 		id: 13,
@@ -42,6 +42,6 @@ export const SportTasks = [
 		category: "Sport",
 		worksCount: "56 работ",
 		daysLeft: "Осталось 3 дня",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/gym.png")
 	},
 ]

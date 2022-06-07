@@ -12,7 +12,7 @@ export const EducationTasks = [
 		category: "Education",
 		daysLeft: "Остался 1 день",
 		worksCount: "12 работ",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/book.png")
 	},
 	{
 		id: 2,
@@ -27,7 +27,7 @@ export const EducationTasks = [
 		category: "Education",
 		daysLeft: "Осталось 3 дня",
 		worksCount: "2 работы",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/book.png")
 	},
 	{
 		id: 3,
@@ -42,6 +42,6 @@ export const EducationTasks = [
 		category: "Education",
 		daysLeft: "Осталось 6 дней",
 		worksCount: "5 работ",
-		img: require("../../img/tasks/cup.png")
+		img: require("../../img/tasks/book.png")
 	},
 ]
