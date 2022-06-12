@@ -74,9 +74,9 @@ export default function Header() {
 															<div className="notification-info-container">
 																<div className="notification-text">
 																	Конкурс работ для <a
-																	href={`/task/${n.taskId}`}>{task.name}</a> окончен<br/>
+																	href={`/finished/${n.taskId}`}>{task.name}</a> окончен<br/>
 																	Ваше место: {n.score}<br/>
-																	<a href={`/task/${n.taskId}?tab=works`}>Посмотрите</a>, кто
+																	<a href={`/finished/${n.taskId}?tab=works`}>Посмотрите</a>, кто
 																	победил
 																</div>
 																<div className="notification-when">{n.when}</div>

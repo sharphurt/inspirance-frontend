@@ -6,7 +6,9 @@ import {Works} from "../data/Works/Works";
 
 export default function WorksContainer({data, excludedWorkIds}) {
 
-	const works = Works.filter((work) => work.taskId === data.id || (excludedWorkIds !== undefined && excludedWorkIds.includes(work.workId)))
+	let works = Works.filter((work) => work.taskId === data.id)
+	if (excludedWorkIds !== undefined)
+		works = works.filter(work => !excludedWorkIds.includes(work.workId))
 
 	return (
 		<div>

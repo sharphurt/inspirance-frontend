@@ -28,6 +28,7 @@ export default function FinishedTaskPage() {
 	const secondPlaceWork = Works.filter(work => work.workId === finishedTask.secondPlace)[0]
 	const thirdPlaceWork = Works.filter(work => work.workId === finishedTask.thirdPlace)[0]
 
+	console.log(firstPlaceWork, secondPlaceWork, thirdPlaceWork)
 	const peopleDone = Works.filter(work => work.taskId === task.id).length
 
 	const [showWorks, setShowWorks] = useState(false)
