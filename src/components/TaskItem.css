@@ -49,7 +49,8 @@ a:hover, a:visited, a:link, a:active
 
     /* small txt */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -71,7 +72,8 @@ a:hover, a:visited, a:link, a:active
 
     /* headers/h2 */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-bold);
+;
     font-style: normal;
     font-weight: 800;
     font-size: 24px;
@@ -112,7 +114,8 @@ a:hover, a:visited, a:link, a:active
     width: 222.95px;
     height: 19px;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -133,7 +136,8 @@ a:hover, a:visited, a:link, a:active
     width: 222.95px;
     height: 17px;
 
-    font-family: 'Inter';
+    font-family: var(--font-family-mont-regular);
+
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

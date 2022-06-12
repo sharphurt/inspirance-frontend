@@ -75,7 +75,8 @@
     width: 714px;
     height: 164px;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-bold);
+;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
@@ -99,7 +100,8 @@
 
     /* txt big */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -156,7 +158,8 @@
 
     background: white;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

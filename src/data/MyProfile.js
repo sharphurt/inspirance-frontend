@@ -12,7 +12,7 @@ export const MyProfile = {
 		},
 		{
 			imageUrl: require("../img/star-silver.png"),
-			name: "17"
+			name: "3"
 		}
 	]
 }

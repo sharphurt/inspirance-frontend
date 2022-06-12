@@ -51,7 +51,8 @@
     order: 0;
     flex-grow: 0;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -85,7 +86,8 @@
 }
 
 .upload-work-header {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-bold);
+;
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
@@ -150,7 +152,8 @@
     outline: none;
 
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

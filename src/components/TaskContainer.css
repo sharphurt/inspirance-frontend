@@ -19,7 +19,8 @@
 
     /* headers/h1 */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-bold);
+;
     font-style: normal;
     font-weight: 800;
     font-size: 40px;
@@ -84,7 +85,8 @@
 
     height: 52px;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -136,7 +138,8 @@
 
 .nothing-found-message {
     position: relative;
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -196,7 +199,8 @@
     background: white;
 
     /* Inside auto layout */
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;

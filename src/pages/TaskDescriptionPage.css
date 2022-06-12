@@ -94,7 +94,8 @@
 }
 
 .project-name {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-bold);
+;
     font-style: normal;
     font-weight: 800;
     font-size: 64px;
@@ -131,7 +132,8 @@
 
     /* txt */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -154,7 +156,8 @@
 
     /* txt */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -177,7 +180,8 @@
 
     /* headers/h3 */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -251,7 +255,8 @@
 
     /* buttons */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -338,7 +343,8 @@
 
     /* menu2 */
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -386,7 +392,8 @@
 }
 
 .crumbs > div {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -398,7 +405,8 @@
 }
 
 .crumbs > a {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -452,7 +460,8 @@
 }
 
 .winner-name-header {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -465,7 +474,8 @@
 }
 
 .winner-name {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;

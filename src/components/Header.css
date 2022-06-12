@@ -10,7 +10,8 @@
     padding: 20px 60px;
     gap: 10px;
 
-    position: absolute;
+    position: fixed;
+    z-index: 10000000;
     height: 100px;
     left: 0;
     right: 0;
@@ -67,7 +68,7 @@
 .header-ref {
     height: 26px;
 
-    font-family: var(--font-family-mont-bold);
+    font-family: var(--font-family-mont-semibold);
     font-style: normal;
     font-weight: 700;
     font-size: 20px;

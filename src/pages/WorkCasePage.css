@@ -96,7 +96,8 @@
 }
 
 .user-info-name {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -111,7 +112,8 @@
 }
 
 .subscribe-button {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -138,7 +140,8 @@
 }
 
 .for-who {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
@@ -213,7 +216,8 @@
 }
 
 .like-button-count {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -248,7 +252,8 @@
 }
 
 .like-button-count-white {
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-semibold);
+;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -267,7 +272,8 @@
     border-style: solid;
     border-color: #E6E1DB;
 
-    font-family: 'Mont';
+    font-family: var(--font-family-mont-regular);
+;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

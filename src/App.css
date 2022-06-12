@@ -1,21 +1,15 @@
 @font-face {
   font-family: "Mont-Bold";
-  font-style: normal;
-  font-weight: 700;
   src: url('https://anima-uploads.s3.amazonaws.com/5c41cf553ad67b0009daf558/Fontfabric - Mont Bold.otf') format("opentype");
 }
 
 @font-face {
   font-family: "Mont-Regular";
-  font-style: normal;
-  font-weight: 400;
   src: url('https://anima-uploads.s3.amazonaws.com/5c41cf553ad67b0009daf558/Fontfabric - Mont Regular.otf') format("opentype");
 }
 
 @font-face {
   font-family: "Mont-SemiBold";
-  font-style: normal;
-  font-weight: 600;
   src: url('https://anima-uploads.s3.amazonaws.com/5bd8a86eee41d2000ab65707/Mont-SemiBold.otf') format("opentype");
 }
 
@@ -42,7 +36,4 @@
 .mont-regular-normal-black-16px {
   color: var(--black);
   font-family: var(--font-family-mont-regular);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 400;
 }
