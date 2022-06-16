@@ -381,6 +381,7 @@
 }
 
 #selected-tab {
+    font-family: var(--font-family-mont-bold);
     font-weight: 700 !important;
 }
 

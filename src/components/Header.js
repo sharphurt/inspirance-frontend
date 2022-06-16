@@ -68,7 +68,7 @@ export default function Header() {
 												)
 											} else {
 												return (
-													<div className="notification">
+													<a href={`/finished/${n.taskId}?tab=works`} className="notification">
 														<div className="notification-horizontal-container">
 															<img className="notification-image" src={n.imageUrl}/>
 															<div className="notification-info-container">
@@ -83,7 +83,7 @@ export default function Header() {
 															</div>
 														</div>
 
-													</div>
+													</a>
 												)
 											}
 										}
